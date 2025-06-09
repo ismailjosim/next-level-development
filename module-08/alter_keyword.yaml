@@ -1,1 +1,21 @@
 # Alter keyword is mainly used to modify table in postgresql.
+
+# if we want to change an existing table structure, data type, constraints we can use the alter keyword.
+
+ALTER TABLE table_name
+action;
+
+action can be one of the following:
+# 1. ADD COLUMN
+# 2. RENAME COLUMN
+# 3. DROP COLUMN
+# 4. ALTER COLUMN
+# 5. ADD CONSTRAINT
+# 6. DROP CONSTRAINT
+# 7. modify data type
+# 8. SET DEFAULT
+# 9. and many more.
+
+# setup postgresql in VSCODE:
+install an extension called PostgreSQL by Database Client
+database-client.com in VSCODE.
