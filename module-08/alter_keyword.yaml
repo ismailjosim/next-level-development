@@ -19,3 +19,29 @@ action can be one of the following:
 # setup postgresql in VSCODE:
 install an extension called PostgreSQL by Database Client
 database-client.com in VSCODE.
+
+DDL:
+create
+DROP
+alter
+truncate
+
+# DML: or data manipulation language
+insert
+update
+delete
+select
+
+select: the select statement is used to query the database and retrieve data from one or more tables and can be customized with various clauses such as WHERE, ORDER BY, and GROUP BY to filter, sort, and group the results.
+
+- Select: retrieve data from one or more tables.
+- FROM: specify the table(s) to retrieve data from.
+- WHERE: filter the results based on a condition.
+- ORDER BY: sort the results based on one or more columns.
+- GROUP BY: group the results based on one or more columns.
+- HAVING: filter the grouped results based on a condition.
+- LIMIT: limit the number of rows returned by the query.
+- OFFSET: skip a specified number of rows before returning the results.
+- JOIN: combine rows from two or more tables based on a related column.
+- UNION: combine the results of two or more SELECT statements into a single result set.
+- DISTINCT: remove duplicate rows from the result set.
