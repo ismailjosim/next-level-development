@@ -45,3 +45,5 @@ select: the select statement is used to query the database and retrieve data fro
 - JOIN: combine rows from two or more tables based on a related column.
 - UNION: combine the results of two or more SELECT statements into a single result set.
 - DISTINCT: remove duplicate rows from the result set.
+
+# here make some changes from linux
