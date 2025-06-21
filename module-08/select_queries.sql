@@ -293,7 +293,7 @@ WHERE
     );
 
 -- * comparison operators
-SELECT * FROM students WHERE age >= 18;
+SELECT * FROM students WHERE age > 18 ORDER BY age ASC;
 
 SELECT * FROM students WHERE age <= 22;
 
