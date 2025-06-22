@@ -50,3 +50,14 @@ GROUP BY
     last_name
 HAVING
     COUNT(*) > 1;
+
+SELECT country, count(*), avg(age) FROM students GROUP BY country;
+
+-- * count student born in each year
+SELECT EXTRACT(
+        year
+        from dob
+    ) as birth_year, count(*) AS student_count
+from students
+GROUP BY
+    birth_year;
