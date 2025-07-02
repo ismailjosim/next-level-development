@@ -28,3 +28,6 @@ WHERE
 
 -- to see index is used:
 EXPLAIN ANALYSE SELECT * FROM employees WHERE employee_id = 3;
+
+-- show data directory
+SHOW data_directory;
