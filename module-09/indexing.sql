@@ -31,3 +31,5 @@ EXPLAIN ANALYSE SELECT * FROM employees WHERE employee_id = 3;
 
 -- show data directory
 SHOW data_directory;
+
+CREATE INDEX idx_employee_name ON employees USING HASH (employee_name)
