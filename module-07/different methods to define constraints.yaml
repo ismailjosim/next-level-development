@@ -1,0 +1,6 @@
+#  this way we can explicitly define constraints in the table creation
+CREATE TABLE person1(
+id serial,
+user_name VARCHAR(50) NOT NULL UNIQUE,
+PRIMARY KEY(id)
+)

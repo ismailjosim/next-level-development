@@ -1,0 +1,22 @@
+# in postgres we can insert data into a table and check constraints using the following steps:
+# 1. Create a table with constraints
+# 2. Insert data into the table
+CREATE TABLE person1(
+    id serial,
+    user_name VARCHAR(50) NOT NULL UNIQUE,
+    PRIMARY KEY(id)
+);
+# 3. insert data into single row
+INSERT INTO your_table (column1, column2) VALUES ('value1', 'value2');
+
+example: INSERT INTO person1 (user_name) VALUES ('john_doe');
+
+# 4. insert data into multiple rows
+INSERT INTO your_table (column1, column2) VALUES ('value1', 'value2');
+
+example: INSERT INTO person1 (user_name) VALUES ('jane_doe'), ('alice_smith');
+
+# another method to insert data into a table. this time we don't need to specify the column names:
+INSERT INTO person1 VALUES (1,'bob_jones',25);
+
+# in the above method, if a column is added new then it might cause an error if we don't specify the column names.

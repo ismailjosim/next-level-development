@@ -1,0 +1,48 @@
+If you want use PostgreSQL in another terminal, you can use the following command to connect to the PostgreSQL server.
+1. first you have to check if PostgreSQL setup correctly or not. more specifically about environment variables.
+2. to do that find environment variables in your system.
+3. add a new environment variables: C:\Program Files\PostgreSQL\17\bin
+then check in your terminal if you can access PostgreSQL or not. run the following command in your terminal:
+psql
+
+4. now to choose user write: psql -U userName;
+5. to clear your terminal write: \! cls
+
+if we don't write any database name. it will connect to the default database which is the same as the user name.
+to connect to a specific database, you can use the following command:
+psql -U userName -d databaseName
+
+6. to see all databases, you can use the following command:
+\l
+
+7. to create a new database, you can use the following command:
+CREATE DATABASE databaseName;
+8. to connect to a specific database, you can use the following command:
+\c databaseName
+9. to see all tables in the current database, you can use the following command:
+\dt
+10. to see all tables in the current database with their schema, you can use the following command:
+\dt+
+11. to see all tables in the current database with their schema and size, you can use the following command:
+\dt+ schemaName.tableName
+
+lastly we can this following command to create db:
+
+CREATE DATABASE name
+    [ WITH ] [ OWNER [=] user_name ]
+           [ TEMPLATE [=] template ]
+           [ ENCODING [=] encoding ]
+           [ STRATEGY [=] strategy ]
+           [ LOCALE [=] locale ]
+           [ LC_COLLATE [=] lc_collate ]
+           [ LC_CTYPE [=] lc_ctype ]
+           [ BUILTIN_LOCALE [=] builtin_locale ]
+           [ ICU_LOCALE [=] icu_locale ]
+           [ ICU_RULES [=] icu_rules ]
+           [ LOCALE_PROVIDER [=] locale_provider ]
+           [ COLLATION_VERSION = collation_version ]
+           [ TABLESPACE [=] tablespace_name ]
+           [ ALLOW_CONNECTIONS [=] allowconn ]
+           [ CONNECTION LIMIT [=] connlimit ]
+           [ IS_TEMPLATE [=] istemplate ]
+           [ OID [=] oid ]
