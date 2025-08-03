@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
 import type { ITask } from '../../../types'
 import type { RootState } from '../../store'
 
@@ -8,23 +8,19 @@ interface InitialState {
 }
 
 const initialState: InitialState = {
-	tasks: [
-		{
-			id: 'name123',
-			title: 'title',
-			description: 'des',
-			dueDate: '23-25',
-			isCompleted: false,
-			priority: 'High',
-		},
-	],
+	tasks: [],
 	filter: 'All',
 }
 
 const taskSlice = createSlice({
 	name: 'task',
 	initialState,
-	reducers: {},
+	reducers: {
+		addTask: (state, action: PayloadAction<ITask>) => {
+			const id = initialState.filter.length + 1
+			state.tasks.push({ ...action.payload, id, isCompleted: false })
+		},
+	},
 })
 
 export const selectTasks = (state: RootState) => {
@@ -33,5 +29,5 @@ export const selectTasks = (state: RootState) => {
 export const selectFilter = (state: RootState) => {
 	return state.todo.filter
 }
-
+export const { addTask } = taskSlice.actions
 export default taskSlice.reducer
