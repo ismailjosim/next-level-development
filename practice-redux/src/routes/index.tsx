@@ -9,13 +9,14 @@ const router = createBrowserRouter([
         element: <MainLayout></MainLayout>,
         children: [
             {
+                index: true,
+                Component: Task
+            },
+            {
                 path: 'user',
                 Component: User
             },
-            {
-                path: 'task',
-                Component: Task
-            }
+
         ]
     }
 
