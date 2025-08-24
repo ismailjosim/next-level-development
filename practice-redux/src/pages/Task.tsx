@@ -1,5 +1,6 @@
 import { AddTaskModal } from "../components/module/tasks/AddTaskModal";
 import TaskCard from "../components/module/tasks/TaskCard";
+import { useGetTasksQuery } from "../redux/api/baseApi";
 import { selectTasks, updateFilter } from "../redux/features/task/taskSlice";
 import { useAppDispatch, useAppSelector } from "../redux/store/hook";
 import {
@@ -10,6 +11,8 @@ import {
 const Task = () => {
     const tasks = useAppSelector(selectTasks)
     const dispatch = useAppDispatch()
+    const { data } = useGetTasksQuery(undefined)
+    console.log(data);
 
     return (
         <div className="mx-auto w-11/12 px-5 mt-20">
