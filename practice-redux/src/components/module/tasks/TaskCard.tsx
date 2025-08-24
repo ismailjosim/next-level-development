@@ -11,7 +11,7 @@ interface IProps {
 }
 
 const TaskCard = ({ task }: IProps) => {
-    const { id, title, description, priority, dueDate } = task || {}
+    const { id, title, description, priority, dueDate, isCompleted } = task || {}
     const dispatch = useAppDispatch()
     return (
         <div className="border px-5 py-3 rounded-md">
@@ -22,13 +22,13 @@ const TaskCard = ({ task }: IProps) => {
                         "bg-red-500": priority === 'High',
                         "bg-yellow-500": priority === 'Medium',
                     })}></div>
-                    <h1>{title}</h1>
+                    <h1 className={cn({ 'line-through': isCompleted })}>{title}</h1>
                 </div>
                 <div className="flex gap-3 items-center">
                     <Button onClick={() => dispatch(deleteTask(id))} variant={'link'} className="p-0 text-red-500">
                         <Trash2 />
                     </Button>
-                    <Checkbox onClick={() => dispatch(toggleCompleteState(id))} />
+                    <Checkbox checked={isCompleted} onClick={() => dispatch(toggleCompleteState(id))} />
                 </div>
             </div>
             <p className="mt-5">{description}</p>
