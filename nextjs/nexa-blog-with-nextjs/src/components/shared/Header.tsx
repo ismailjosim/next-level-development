@@ -1,15 +1,11 @@
-
-import Banner from "./Banner/Banner";
-import Navbar from "./Navbar";
-
+import Navbar from './Navbar'
 
 const Header = () => {
-  return (
-    <>
-      <Navbar />
-      <Banner />
-    </>
-  );
-};
+	return (
+		<>
+			<Navbar />
+		</>
+	)
+}
 
-export default Header;
+export default Header
