@@ -1,0 +1,12 @@
+# RDBMS -> Relational Database management System.
+
+Why file system failed while we tried to store data using FS
+* Problems:
+    - Multiple format(.txt, .mp4 etc)
+    - Data Redundancy
+    - Data Inconsistency
+    - No Concurrency Protocol
+    - Security Issues
+
+To solve this Problems we will use DBMS or Database management system.
+
